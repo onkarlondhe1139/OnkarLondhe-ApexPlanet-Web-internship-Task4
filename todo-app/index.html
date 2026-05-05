@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow To-Do App</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Project 2</p>
+        <h1>TaskFlow To-Do Manager</h1>
+        <p class="lead">
+          Add tasks, assign a priority, track completion, and keep everything saved with localStorage even after the
+          page reloads.
+        </p>
+      </div>
+      <a class="back-link" href="../index.html">Back to Task Hub</a>
+    </section>
+
+    <section class="dashboard">
+      <article class="panel stat-card">
+        <span>Total Tasks</span>
+        <strong id="totalTasks">0</strong>
+      </article>
+      <article class="panel stat-card">
+        <span>Completed</span>
+        <strong id="completedTasks">0</strong>
+      </article>
+      <article class="panel stat-card">
+        <span>Pending</span>
+        <strong id="pendingTasks">0</strong>
+      </article>
+    </section>
+
+    <section class="workspace">
+      <article class="panel form-panel">
+        <h2>Add a New Task</h2>
+        <div class="form-grid">
+          <input id="taskInput" type="text" placeholder="Enter your task">
+          <select id="prioritySelect">
+            <option value="High">High Priority</option>
+            <option value="Medium" selected>Medium Priority</option>
+            <option value="Low">Low Priority</option>
+          </select>
+          <button id="addTaskButton" type="button">Add Task</button>
+        </div>
+      </article>
+
+      <article class="panel controls-panel">
+        <div class="control-row">
+          <label for="statusFilter">Filter Tasks</label>
+          <select id="statusFilter">
+            <option value="all">All Tasks</option>
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+          </select>
+        </div>
+        <button id="clearCompletedButton" class="secondary-button" type="button">Clear Completed</button>
+      </article>
+    </section>
+
+    <section class="panel list-panel">
+      <div class="list-header">
+        <h2>Your Tasks</h2>
+        <p id="taskMessage">Start by adding your first task.</p>
+      </div>
+      <ul id="taskList" class="task-list"></ul>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
