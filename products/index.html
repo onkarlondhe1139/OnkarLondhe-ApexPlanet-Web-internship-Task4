@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Listing Page</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Project 3</p>
+        <h1>Product Listing and Discovery Page</h1>
+        <p class="lead">
+          Browse products with category filters, price-range controls, search input, and sorting based on rating,
+          price, or title.
+        </p>
+      </div>
+      <a class="back-link" href="../index.html">Back to Task Hub</a>
+    </section>
+
+    <section class="controls">
+      <article class="panel filters-panel">
+        <div class="field">
+          <label for="searchInput">Search</label>
+          <input id="searchInput" type="search" placeholder="Search products">
+        </div>
+
+        <div class="field">
+          <label for="categoryFilter">Category</label>
+          <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Fitness">Fitness</option>
+            <option value="Home">Home</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="priceFilter">Price Range</label>
+          <select id="priceFilter">
+            <option value="all">All Prices</option>
+            <option value="under500">Under Rs 500</option>
+            <option value="500to1000">Rs 500 to Rs 1000</option>
+            <option value="above1000">Above Rs 1000</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="sortBy">Sort By</label>
+          <select id="sortBy">
+            <option value="ratingDesc">Rating: High to Low</option>
+            <option value="priceAsc">Price: Low to High</option>
+            <option value="priceDesc">Price: High to Low</option>
+            <option value="nameAsc">Name: A to Z</option>
+          </select>
+        </div>
+      </article>
+
+      <article class="panel summary-panel">
+        <h2>Catalog Summary</h2>
+        <strong id="resultCount">0 Products</strong>
+        <p id="activeSummary">Showing the full catalog.</p>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div id="productGrid" class="product-grid"></div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
